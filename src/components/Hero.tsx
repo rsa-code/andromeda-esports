@@ -6,7 +6,7 @@ const Hero = () => {
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
         
-        <h1 className="mb-6 font-display text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-cyan-400 sm:text-8xl drop-shadow-[0_0_30px_rgba(124,58,237,0.5)]">
+        <h1 className="mb-6 font-display text-5xl font-black text-primary bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-cyan-400 sm:text-8xl drop-shadow-[0_0_30px_rgba(124,58,237,0.5)]">
           Join the Galaxy.
         </h1>
         
