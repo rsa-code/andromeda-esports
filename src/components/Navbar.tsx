@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/andromeda-04.svg';
 
 const NAV_ITEMS = [
-  { label: 'HOME', href: '#' },
+  { label: 'HOME', to: '/' },
   { 
     label: 'TEAMS', 
-    href: '#',
+    to: '#',
     children: [
-      { label: 'VALORANT', href: '#' },
-      { label: 'LEAGUE OF LEGENDS', href: '#' },
-      { label: 'CS2', href: '#' },
-      { label: 'ROCKET LEAGUE', href: '#' },
+      { label: 'VALORANT', to: '#' },
+      { label: 'LEAGUE OF LEGENDS', to: '#' },
+      { label: 'CS2', to: '#' },
+      { label: 'ROCKET LEAGUE', to: '#' },
     ]
   },
-  { label: 'SHOP', href: '#' },
-  { label: 'NEWS', href: '#' },
+  { label: 'SHOP', to: '#' },
+  { label: 'NEWS', to: '/news' },
 ];
 
 const Navbar = () => {
@@ -26,35 +27,35 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img src={Logo} alt="Andromeda" className="h-14 w-auto" />
             <span className="font-display text-2xl font-bold text-white tracking-wider">
               ANDROMEDA
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className="relative group">
-                <a
-                  href={item.href}
+                <Link
+                  to={item.to}
                   className="flex items-center gap-1 text-sm font-medium text-slate-300 transition-colors hover:text-accent"
                 >
                   {item.label}
-                </a>
+                </Link>
                 
                 {item.children && (
                   <div className="absolute left-0 top-full pt-4 opacity-0 invisible -translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                     <div className="w-48 rounded-lg border border-white/10 bg-slate-950 p-2 shadow-xl backdrop-blur-xl">
                       {item.children.map((child) => (
-                        <a
+                        <Link
                           key={child.label}
-                          href={child.href}
+                          to={child.to}
                           className="block rounded-md px-4 py-2 text-sm text-slate-300 transition-colors hover:bg-white/5 hover:text-accent"
                         >
                           {child.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -79,22 +80,24 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4">
             {NAV_ITEMS.map((item) => (
               <div key={item.label}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.to}
                   className="text-slate-300 hover:text-accent block"
+                  onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
                 {item.children && (
                   <div className="ml-4 mt-2 flex flex-col space-y-2 border-l border-white/10 pl-4">
                     {item.children.map((child) => (
-                      <a
+                      <Link
                         key={child.label}
-                        href={child.href}
+                        to={child.to}
                         className="text-sm text-slate-400 hover:text-accent"
+                        onClick={() => setIsOpen(false)}
                       >
                         {child.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
