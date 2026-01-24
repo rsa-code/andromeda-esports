@@ -17,7 +17,7 @@ const NewsCard = ({ id, title, excerpt, date, image, category }: NewsCardProps) 
         <img 
           src={image} 
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 "
         />
         <div className="absolute top-4 left-4">
           <span className="bg-background/80 text-accent text-xs font-bold px-2 py-1 rounded backdrop-blur-md border border-accent/20">

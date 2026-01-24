@@ -17,7 +17,7 @@ const NewsMain = ({ id, title, excerpt, date, image, category }: NewsMainProps) 
       <img 
         src={image} 
         alt={title}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700"
       />
       
       {/* Gradient Overlay */}
