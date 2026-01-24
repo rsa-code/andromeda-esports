@@ -17,8 +17,8 @@ const AllNews = () => {
     <div className="min-h-screen bg-background pt-32 pb-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <h1 className="text-5xl font-display font-bold text-white mb-4">News Archive</h1>
-          <p className="text-slate-400 text-lg">Latest updates from the Andromeda Galaxy.</p>
+          <h1 className="text-5xl font-display font-bold text-white mb-4">News</h1>
+          <p className="text-slate-400 text-lg">Latest updates from the team.</p>
         </div>
 
         <div className="space-y-12">

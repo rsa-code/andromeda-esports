@@ -36,7 +36,7 @@ const NewsArticle = () => {
         
         <div className="absolute bottom-0 left-0 w-full px-4 pt-20">
           <div className="max-w-4xl mx-auto">
-            <Link to="/" className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-6 backdrop-blur-sm bg-black/30 px-4 py-2 rounded-full border border-white/10">
+            <Link to="/" className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-6 backdrop-blur-sm bg-black/30 px-4 py-2 rounded border border-white/10">
               <ArrowLeft className="w-4 h-4" />Back
             </Link>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">
